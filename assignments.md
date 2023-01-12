@@ -1,7 +1,7 @@
 # Development essentials
 
 - [x] Discord - I am on discord. I've found it interesting how versitile and interesting discord has ended up being. From getting laughs from memes to being able to communicate. I am slightly worried about how organized it will be this semester. Last semester, it felt more like a mess.
-- [x] The Console - I am proficient with the console. I was suprised that I learned something when I did this assignment (at least part of the assignment). I learned that "less" is another text editor on the terminal. I thought that was cool. I hadn't run into that or "more" previously either. I also liked the command `ls ../`. I think that will be very useful in the future. I hope the students will take the time to learn how to use terminal (It was very useful for all of my other CS classes.) This will be a repeat for any students coming from CS 224. I don't know if any of my other classes I have taken have explicitly taught me how to use the terminal.
+- [x] The Console - I am proficient with the console. I was suprised that I learned something when I did this assignment (at least part of the assignment). I learned that "less" is another text editor on the terminal. I thought that was cool. I hadn't run into that or "more" previously either. I also liked the command `ls ../`. I think that will be very useful in the future. I hope the students will take the time to learn how to use terminal (It was very useful for all of my other CS classes.) This will be a repeat for any students coming from CS 224. I don't know if any of my other classes I have taken have explicitly taught me how to use the terminal. **Is there maybe a game we can direct students towards?**
 - There are other commands listed that I haven't used before that I should come back and learn.
 - [x] Github - repo - https://github.com/math919191/CS260W23 I think I got it. I learned the VSC with git with this video (https://www.youtube.com/watch?v=i_23KUAEtUM). Learning more about md was helpful too.
 - I need to come back and make sure I really understand merge conflicts and branches. That seemed to be a problem last semester that I need to learn how to teach and do better.
@@ -20,16 +20,19 @@
 - I need to go through this tutorial so I can see where the students are coming from.
 - [ ] HTTPS, TLS, and certificates
 - I need to secure my website from the new ip address. That will be a learning experience. I liked how the CaddyFile already has a lot of stuff in it. I think that will save a lot of headache. It feels less overwhelming when there is already edits made to it. I think the most difficult thing will people using vim / the terminal for the first time.
-- I wonder how many freshmen we have. **look up class distribution**
+- I wonder how many freshmen we have and how it will change in coming semesters. **look up class distribution**
 
 # HTML and CSS
 
-- [ ] HTML introduction
-- [ ] HTML structure
+- [ ] HTML introduction - [code pen html intro](https://codepen.io/math919191/pen/yLqbPxP) - I like this assignment. I learned that there is a main HTML tag. I keep forgetting the <a> tag for links -- hopefully I can remember that one this time (:
+- [ ] HTML structure - [code pen html structure](https://codepen.io/math919191/pen/JjBNOmx) - I like this assignment. I hadn't thought about just how logical and simple html structure is and how well it has held up over the last several decades.
 - [ ] HTML input
 - [ ] HTML media
 - [ ] HTML website
 - [ ] Simon HTML
+
+# I think there should be a break right here in content, split up the CSS and HTML.
+
 - [ ] CSS practice
 - [ ] CSS frameworks
 - [ ] Simon CSS
