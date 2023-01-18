@@ -13,23 +13,22 @@
 # Web Servers
 
 - [x] AWS - EC2 I thought this intro was phenomenal. I think we will still get some students that mess up. But, the desciption and how it seemed to work was great. I REALLY like the elastic IP addresses. I had no idea that was a thing, we had so many problems with that last semester. I think students ultimately missed out because they didn't have a final project to keep running at the end of the semester. I REALLY liked the credit specification (AWS) thing, that caused SO many issues last semester. _It didn't work for me_ but I think that is just becaues I might have something weird about my account, I've had it for 6 months and there are a couple of odd things. I REALLY liked the AMI, I didn't know that existed either. Hopefully, that will allow us to focus more on development and less on the server stuff.
-- [ ] AWS - Route 53 - Great tutorial!
-- [ ] HTTPS, TLS, and certificates
-- I need to secure my website from the new ip address. That will be a learning experience. I liked how the CaddyFile already has a lot of stuff in it. I think that will save a lot of headache. It feels less overwhelming when there is already edits made to it. I think the most difficult thing will people using vim / the terminal for the first time.
-- I wonder how many freshmen we have and how it will change in coming semesters. **look up class distribution**
+- [x] AWS - Route 53 - Great tutorial!
+- [x] HTTPS, TLS, and certificates - Great tutorial! Very clear, it wasn't confusing at all. I liked how the CaddyFile already has a lot of stuff in it. I think that will save a lot of headache. It feels less overwhelming when there is already edits made to it. I think the most difficult thing will people using vim / the terminal for the first time. I wonder how many freshmen we have and how it will change in coming semesters. **look up class distribution**
 
 # HTML and CSS
 
-- [ ] HTML introduction - [code pen html intro](https://codepen.io/math919191/pen/yLqbPxP) - I like this assignment. I learned that there is a main HTML tag. I keep forgetting the <a> tag for links -- hopefully I can remember that one this time (:
-- [ ] HTML structure - [code pen html structure](https://codepen.io/math919191/pen/JjBNOmx) - I like this assignment. I hadn't thought about just how logical and simple html structure is and how well it has held up over the last several decades.
-- [ ] HTML input
-- [ ] HTML media
-- [ ] HTML website
-- [ ] Simon HTML
+- [x] HTML introduction - I like the assignment
+- [x] HTML structure - I like the assignment
+- [x] HTML input - I like the assignment.
+- [x] HTML media - I like the assignment.
+- [x] HTML website - I REALLY like how the deployment process works. It was very easy and clear on how to do it. I think the only issue we might have is people learning how to use the command line. But, it's a really good skill to have.
+- [x] Simon HTML - I liked it! I think it is a great example for the students. Should this be before the HTML website?
 
 # I think there should be a break right here in content, split up the CSS and HTML.
 
-- [ ] CSS practice
+- [x] CSS practice - I like the assignment. I think it enables the students to learn if they choose to do so.
+- [ ] CSS flex
 - [ ] CSS frameworks
 - [ ] Simon CSS
 - [ ] UX design

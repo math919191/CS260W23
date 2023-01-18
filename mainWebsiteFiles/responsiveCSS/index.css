@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Neuton&family=Open+Sans&display=swap');
+
+:root {
+  --main: #274690;
+  --secondary: #ffffff;
+  --accent: #F6AE2D;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  background-color: var(--main);
+  color: var(--secondary);
+}
+
+.intro {
+  display: flex;
+  width: 80%;
+  margin: 30vh 10vw 40vh 10vw;
+  /* top right bottom left */
+  flex-direction: column;
+
+}
+
+h1 {
+  color: var(--accent)
+}
+
+.projects {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 10vw 30vh 10vw;
+  /* top right bottom left */
+  /* border: white 2px solid; */
+
+
+}
+
+h2 {
+  margin: 0 10vw 0 10vw;
+  color: var(--accent)
+
+}
+
+.project {
+  display: flex;
+  border: white 3px solid;
+  margin: 10px 10px 10px 0;
+  /* top right bottom left */
+
+  width: 300px;
+  
+}
+
+.projectTitle {
+  display: flex;
+  color: var(--accent);
+  width: 80%;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+
+p {
+  display: flex;
+  align-items: center;
+}
