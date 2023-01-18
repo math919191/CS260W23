@@ -28,7 +28,7 @@
 # I think there should be a break right here in content, split up the CSS and HTML.
 
 - [x] CSS practice - I like the assignment. I think it enables the students to learn if they choose to do so.
-- [ ] CSS flex
+- [x] CSS flex - Ha! I did it!
 - [ ] CSS frameworks
 - [ ] Simon CSS
 - [ ] UX design

@@ -28,8 +28,8 @@
 # I think there should be a break right here in content, split up the CSS and HTML.
 
 - [x] CSS practice - [animated CSS](https://codepen.io/math919191/pen/dyjZGZw) - I didn't know just how much you can do with just plain CSS! I created a slide box.
-- [x] CSS flex - I hated trying to make responsive websites, but it's easier! I finally created a website about me. It took forever to finally create a site about me. I've wanted to do it for a really long time and make it look good. I did it! [responsive CSS](https://rebekahdaniels.net/responsiveCSS/)
-- [ ] CSS frameworks
+- [x] CSS flex - I did it! [responsive CSS](https://rebekahdaniels.net/responsiveCSS/). I hated trying to make responsive websites, but it's easier! I finally created a website about me. It took forever to finally create a site about me. I've wanted to do it for a really long time and make it look good. Couple of neat things I learned -- viewheight and view width are extremely helpful, there are variables for CSS colors, according to a website, you only need to use 3 colors and that's all, I was reminded how to do fonts, I was reminded how cool coolors.co is,
+- [x] CSS frameworks - I didn't change anything. [code pen](https://codepen.io/math919191/pen/vYaWKgW). In generally, bootstrap is great. I failed to realize that bootstrap's downfall is its popularity. It looks very similar throughout. Very interesting.
 - [ ] Simon CSS
 - [ ] UX design
 - [ ] Start up HTML and CSS
