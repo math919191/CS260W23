@@ -30,12 +30,12 @@
 - [x] CSS practice - [animated CSS](https://codepen.io/math919191/pen/dyjZGZw) - I didn't know just how much you can do with just plain CSS! I created a slide box.
 - [x] CSS flex - I did it! [responsive CSS](https://rebekahdaniels.net/responsiveCSS/). I hated trying to make responsive websites, but it's easier! I finally created a website about me. It took forever to finally create a site about me. I've wanted to do it for a really long time and make it look good. Couple of neat things I learned -- viewheight and view width are extremely helpful, there are variables for CSS colors, according to a website, you only need to use 3 colors and that's all, I was reminded how to do fonts, I was reminded how cool coolors.co is,
 - [x] CSS frameworks - I didn't change anything. [code pen](https://codepen.io/math919191/pen/vYaWKgW). In generally, bootstrap is great. I failed to realize that bootstrap's downfall is its popularity. It looks very similar throughout. Very interesting.
-- [ ] Simon CSS
-- [ ] UX design
-- [ ] Start up HTML and CSS
+- [x] Simon CSS - I did it! [my simon website](simon.rebekahdaniels.net) and [my simon css files](simon/simon-css/styles.css) . I am getting better at doing CSS. I know how to do all this CSS stuff on my own. I only referenced his code a few times. 
+- [x] UX design - I found the information about websites helpful, even though I've seen it a few times. Here is an [interesting website](https://github.com/) that I liked. It is github's homepage. It is very useable and I can get to what I want to from it. It would be nice, however, if they had a feature to list the most recent repos, not the most used. (CS235 repo keeps coming up, even though I probably won't ever use that repo again.) 
+- [ ] Start up HTML and CSS - I'll come back if I have time.
 
 # JavaScript
-
+### I am familiar with all of the following things in Javascript. I will come back if I have time. 
 - [ ] JavaScript types, operators, conditionals, and loops
 - [ ] JavaScript functions
 - [ ] JavaScript arrow functions
@@ -48,8 +48,9 @@
 - [ ] Javascript document object model
 - [ ] Javascript promises
 - [ ] Javascript async/await
+
 - [ ] Simon Javascript
-- [ ] Start up Javascript
+- [ ] Start up Javascript - I'll come back if I have time.
 
 # Midterm
 

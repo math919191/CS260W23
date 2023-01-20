@@ -29,9 +29,9 @@
 
 - [x] CSS practice - I like the assignment. I think it enables the students to learn if they choose to do so.
 - [x] CSS flex - Ha! I did it!
-- [ ] CSS frameworks
-- [ ] Simon CSS
-- [ ] UX design
+- [x] CSS frameworks - I like this assignment. I learned stuff about bootstrap I hadn't realized before
+- [x] Simon CSS - I like it! I did it and didn't have too many issues.
+- [ ] UX design - There is some amazing content here. Very informative.
 - [ ] Start up HTML and CSS
 
 # JavaScript
