@@ -42,7 +42,9 @@
           </nav>
         
         <div class="content">
-            <div class="game">
+          <div id="playerName">Player: </div>  
+          <div class="game">
+
                 <div>
                     <button 
                       id="green" 
@@ -68,7 +70,7 @@
                     <div class="score-and-reset">
                     <p>Score: <div id="score">0</div></p>
 
-                    <button type="button" class="btn btn-primary">Reset</button>
+                    <button id="reset" type="button" class="btn btn-primary" onclick="resetGame()">Reset</button>
                     </div>
                 </div>
                 

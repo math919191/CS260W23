@@ -57,9 +57,11 @@
 
 # Web services
 
-- [ ] Fetch
-- [ ] Node.js
-- [ ] Express
+- [x] Fetch - I think it's a great introduction to APIs/fetch. I am concerned about students understanding JSON objects. For example, doing ``response.value`` to get the joke was something that was difficult last semester. I don't know how extensively we will be using APIs this semester, but that might be something good to teach more in depth. Another thing that might be helpful with this assignment is shown it being done with async / await / axios as well as fetch because I think those are important to understand as well. I give an example of this on a [code pen](https://codepen.io/math919191/pen/bGjLQQM?editors=1111)
+- [x] Node.js - I struggled to install this on windows. I ended up going to the [node website](https://nodejs.org/en/download/) and a [nvm website](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) to be able to install this. I don't know if this is something that others will run into as well, or if it something odd with my computer. 
+- [x] Express - I am concerned with how much information we are giving at once. I did not understand everything when I read through it. I need to go back and spent some time trying to understand. I am familiar with express from TAing and taking the class. The other thing is **curl commands**. These I think should be explained in more detail. Last semester, some students really struggled with those. I didn't quite understand the purpose of cookie-parser with this assignment. If it can be simplified, I think it should be. 
+- [ ] Debugging Node - I learned A TON! THIS IS GOOD STUFF! I have avoided using commands when debugging, but they are super helpful. Nodemon is also super super neat and I wish that I had had that previously. I am a little confused about whether you can use it in the debugger in VSC, or just doing nodemon file.js. I think a simple video would be extremely helpful as well. 
+- [ ] UI testing and Endpoint testing were EXTREMELY interesting and useful. 
 - [ ] Simon service
 - [ ] Data services
 - [ ] Simon DB

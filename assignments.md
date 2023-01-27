@@ -49,7 +49,8 @@
 - [ ] Javascript promises
 - [ ] Javascript async/await
 
-- [ ] Simon Javascript
+- [x] Simon Javascript part 1 - simon.rebekahdaniels.net/play.html - I got the basic js working! I haven't gotten the login or the scores to populate on the other pages. Overall, I'm really pleased that I was able to do that. It took roughly 2 hours to complete some of the basic logic for the simon itself. I didn't understand all of what the code did in the professors' example.
+- [ ] simon js part 2 - I need to populate the score and the names 
 - [ ] Start up Javascript - I'll come back if I have time.
 
 # Midterm
@@ -58,9 +59,9 @@
 
 # Web services
 
-- [ ] Fetch
-- [ ] Node.js
-- [ ] Express
+- [x] Fetch - [my code pen](https://codepen.io/math919191/pen/bGjLQQM) - chuck norris jokes - I found the use of the query selector and stringify interesting, I hadn't seen those before. 
+- [x] Node.js - Node is freaking amazing. I'm realizing that the more I use it. There are lots of uses for it. I also talked to some family members who work in CS, and it was interesting to hear them talk about Node.js and how they also are familiar with it. I struggled to install it on windows.
+- [x] Express - It's neat that we can set up our own endpoints. I got it working. **come back when I have time**
 - [ ] Simon service
 - [ ] Data services
 - [ ] Simon DB

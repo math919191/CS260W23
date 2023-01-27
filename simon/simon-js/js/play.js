@@ -6,7 +6,7 @@ class Button {
 
     async flashButton(){
         this.elName.style.opacity = .5
-        this.audio.play()
+        //this.audio.play()
         await delay(500);
         this.elName.style.opacity = 1 
         await delay(500)       
@@ -84,8 +84,6 @@ class playGame {
         this.sequence = [];
         this.currNum = 0;
         this.colors = ["green", "red", "blue", "yellow"]
-
-        console.log("here")
         this.startGame()
     }
 
@@ -93,7 +91,6 @@ class playGame {
         let rand = Math.floor(Math.random()*10) % 4
         
         let color = this.colors[rand] 
-        console.log(color)
         return color
     }
 
@@ -116,7 +113,6 @@ class playGame {
     }
 
     async playSequence(){
-        console.log("sequ", this.sequence)
         for (let i = 0; i < this.sequence.length; i++){
             await buttons.flashMyButton(this.sequence[i])    
         }
@@ -147,8 +143,29 @@ class playGame {
     }
 
     endGame(){
-        console.log("GAME OVER")
-        alert("Game over, click OK to play again")
+        const playerName = localStorage.getItem('userName');
+        const date = new Date().toLocaleDateString();
+
+        let gameScore = {name : playerName, score: this.score, date: date }
+        let currScores = JSON.parse(localStorage.getItem('scores'));
+        
+        
+        if (currScores){
+            currScores.push(gameScore);
+            // for (let i = 0; i < currScores.length; i++) {
+            //     if (currScores[i].score <= this.score){
+            //         currScores.splice(i, 0, gameScore);
+            //         break;
+            //     }
+            // }
+            localStorage.setItem("scores", JSON.stringify(currScores))
+        } else {
+            let array = []
+            array.push(gameScore)
+            localStorage.setItem("scores", JSON.stringify(array))
+        }
+
+        alert("Game over, click to play again")
         this.startGame()
     }
 
@@ -163,13 +180,30 @@ function clicked(button){
  
 }
 
+function getPlayerName(){
+    const playerName = localStorage.getItem('userName');
+    let name = "";
+    if (playerName) {
+        name = playerName;
+    } else {
+        name = "MYSTERY???"
+        localStorage.setItem("userName", "MYSTERY??")
+    }
+    const nameEl = document.querySelector("#playerName")
+    nameEl.innerHTML = "Player: " + name
+}
+
+
+getPlayerName()
 
 var buttons = new Buttons();
-
 var game = new playGame();
+
+
 
 function delay(milliseconds) {
     return new Promise((resolve) => {
       setTimeout(resolve, milliseconds);
     });
-  }
+}
+

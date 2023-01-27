@@ -1,11 +1,15 @@
-import playSimon from './playSimon.js'
+import Welcome from './Components/Welcome.js';
+import Game from './Game.js'
 
 
 function App() {
   return (
     <div className="App">
       <p>Hello world</p>
-      <playSimon/>
+
+
+      <Welcome />
+      <Game />
     </div>
   );
 }
