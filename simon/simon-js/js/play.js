@@ -151,13 +151,12 @@ class playGame {
         
         
         if (currScores){
-            currScores.push(gameScore);
-            // for (let i = 0; i < currScores.length; i++) {
-            //     if (currScores[i].score <= this.score){
-            //         currScores.splice(i, 0, gameScore);
-            //         break;
-            //     }
-            // }
+            for (let i = 0; i < currScores.length; i++) {
+                if (currScores[i].score <= this.score){
+                    currScores.splice(i, 0, gameScore);
+                    break;
+                }
+            }
             localStorage.setItem("scores", JSON.stringify(currScores))
         } else {
             let array = []
