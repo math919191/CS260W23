@@ -62,10 +62,10 @@
 - [x] Fetch - [my code pen](https://codepen.io/math919191/pen/bGjLQQM) - chuck norris jokes - I found the use of the query selector and stringify interesting, I hadn't seen those before. 
 - [x] Node.js - Node is freaking amazing. I'm realizing that the more I use it. There are lots of uses for it. I also talked to some family members who work in CS, and it was interesting to hear them talk about Node.js and how they also are familiar with it. I struggled to install it on windows.
 - [x] Express - It's neat that we can set up our own endpoints. I got it working. **come back when I have time**
-- [ ] Simon service
-- [ ] Data services
-- [ ] Simon DB
-- [ ] Account creation and login
+- [x] Simon service - I learned more about how seperate the back end should be from the front. It helped to solidify some of my understanding about how node works. I am still confused on how to debug locally. It doesn't quit make sense how to run the back end on the same port as the website locally.  
+- [x] Data services - I liked this assignment. I was able to add local variables which was cool to learn how to do on windows. I didn't like the GUI though for doing this. 
+- [x] Simon DB - I did it! I was able to do this without too much of a problem. The endpoints made it really easy to do this. I didn't restart my pm2 and actually pulled Professor Jensen's data from his database. It really confused me for a minute.  
+- [x] Account creation and login - I did it! Most of the backend stuff made sense. I need to look into it a little more though. The Node packages are extremely useful. 
 - [ ] Simon Login
 - [ ] Websocket chat
 - [ ] Simon websocket
