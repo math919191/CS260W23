@@ -1,0 +1,98 @@
+:root {
+    --blue: #19647E;
+    --red: #D72638;
+    --yellow: #FCBA04;
+    --white: #FBF5F3;
+    --black: #000022;
+  }
+
+
+* {
+    background-color: var(--white);
+}
+
+.boardAndChatAndScore {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title {
+    border: red solid 2px
+}
+
+.gameBoard {
+    border: orange solid 2px;
+    width: 90vw;
+    max-width: 450px;
+
+    height: 70vw; 
+    max-height: 350px;
+    background-color: var(--blue);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1px;
+    background-color: #19647E;
+}
+
+.dot {
+    display: flex;
+    width: 9vw;
+    max-width: 50px;
+    height: 9vw;
+    max-height: 50px;
+
+
+    background-color: var(--red);
+    border-radius: 50%;
+    /* display: inline-block; */
+    border: black solid 2px;
+}
+
+.chat {
+    display: flex;
+
+    border: yellow solid 2px;
+    width: 90vw;
+    max-width: 225px;
+
+    height: 70vw; 
+    max-height: 350px;
+
+    background-color: var(--blue);
+
+    
+}
+
+.message {
+    width: 60vw;
+    max-width: 150px;
+
+    height: 7vw; 
+    max-height: 35px;
+
+    background-color: #000022;
+
+    justify-content: right;
+
+}
+
+.scoreboard {
+    border: green solid 2px;
+}
+
+.yellowDot {
+    background-color: var(--yellow);   
+}
+
+.emptyDot {
+    background-color: var(--white);   
+}
