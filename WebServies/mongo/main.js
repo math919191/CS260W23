@@ -1,23 +1,43 @@
 const { MongoClient } = require('mongodb');
 
-const userName = 'holowaychuk';
-const password = 'express';
-const hostname = 'mongodb.com';
+// Read the credentials from environment variables so that you do not accidentally check in your credentials
 
-const uri = `mongodb+srv://${userName}:${password}@${hostname}`;
+const userName = process.env.MONGOUSER;
+const password = process.env.MONGOPASSWORD;
+const hostname = process.env.MONGOHOSTNAME;
 
-const client = new MongoClient(uri);
+console.log(userName);
 
-const collection = client.db('rental').collection('house');
+async function main() {
+  // Connect to the database cluster
+  const url = `mongodb+srv://${userName}:${password}@${hostname}`;
+  const client = new MongoClient(url);
+  const collection = client.db('rental').collection('house');
 
-const house = {
-  name: 'Beachfront views',
-  summary: 'From your bedroom to the beach, no shoes required',
-  property_type: 'Condo',
-  beds: 1,
-};
-await collection.insertOne(house);
+  // Insert a document
+  const house = {
+    name: 'Beachfront views',
+    summary: 'From your bedroom to the beach, no shoes required',
+    property_type: 'Condo',
+    beds: 1,
+  };
+  await collection.insertOne(house);
 
-const cursor = collection.find();
-const rentals = await cursor.toArray();
-rentals.forEach((i) => console.log(i));
+  // Query the documents
+  const query = { property_type: 'Condo', beds: { $lt: 2 } };
+  const options = {
+    sort: { score: -1 },
+    limit: 10,
+  };
+
+  const cursor = collection.find(query, options);
+  const rentals = await cursor.toArray();
+  rentals.forEach((i) => console.log(i));
+
+  //const toBeDel = client.db.house.find();
+  //db.house.deleteMany({});
+  collection.deleteMany({});
+
+}
+
+main().catch(console.error);
