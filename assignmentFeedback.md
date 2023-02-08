@@ -66,8 +66,9 @@
 - [ ] Data services
 - [ ] Simon DB
 - [ ] Account creation and login
-- [ ] Simon Login
-- [ ] Websocket chat
+- [ ] Simon Login - I copied parts of code, but for the most part typed it out and tried to understand and come up with stuff on my own. The modal for bootstrap for the error message was giving me trouble, I might have messed something up while copying code. The login button didn't seem to work unless you cleared the storage when you logged out. I also don't know if that is me copying code incorrectly. 
+- [ ] Debugging Websocket chat - seemingly simple! The video/gif was super helpful! I wonder if there is a way to implement more of them. 
+- [ ] Websocket Chat - I did it! 
 - [ ] Simon websocket
 - [ ] Start up service
 

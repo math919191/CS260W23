@@ -50,7 +50,7 @@
 - [ ] Javascript async/await
 
 - [x] Simon Javascript part 1 - simon.rebekahdaniels.net/play.html - I got the basic js working! I haven't gotten the login or the scores to populate on the other pages. Overall, I'm really pleased that I was able to do that. It took roughly 2 hours to complete some of the basic logic for the simon itself. I didn't understand all of what the code did in the professors' example.
-- [ ] simon js part 2 - I need to populate the score and the names 
+- [x] simon js part 2 - I need to populate the score and the names 
 - [ ] Start up Javascript - I'll come back if I have time.
 
 # Midterm
@@ -66,10 +66,10 @@
 - [x] Data services - I liked this assignment. I was able to add local variables which was cool to learn how to do on windows. I didn't like the GUI though for doing this. 
 - [x] Simon DB - I did it! I was able to do this without too much of a problem. The endpoints made it really easy to do this. I didn't restart my pm2 and actually pulled Professor Jensen's data from his database. It really confused me for a minute.  
 - [x] Account creation and login - I did it! Most of the backend stuff made sense. I need to look into it a little more though. The Node packages are extremely useful. 
-- [ ] Simon Login
-- [ ] Websocket chat
-- [ ] Simon websocket
-- [ ] Start up service
+- [x] Simon Login - I did it! It took longer than I thought it would but it was extremely informative in trying to do it on my own. I ran into a few issues while working on it, but I was able to work through all of them! I figured out how to debug with them on the same port, I don't know why that was causing me so much trouble earlier. I learned about text decoration none to be able to choose which login screen people see. I learned more about databases and inserting into them. I learned more about the debuggers and how powerful those tools are. It was interesting following things through 4 different files to be able to do something to be able to keep the different functionalities partitioned (eg `button in html -> login.js -> index.js -> database.js`). 
+- [x] Websocket chat - There was quite of bit of stuff but it made sense!
+- [ ] Simon websocket - It looks doable! It isn't as complicated as I though it was. Super neat!
+- [ ] Start up service - Will come back if there is time.
 
 # Web frameworks, mobile, and security
 

@@ -9,30 +9,41 @@
 
 * {
     background-color: var(--white);
+    text-align: center;
+}
+
+body {
+    background-color: var(--white);
 }
 
 .boardAndChatAndScore {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--white);
 }
 
-.title {
-    border: red solid 2px
+h1 {
+
+    color: #19647E ;
 }
 
 .gameBoard {
-    border: orange solid 2px;
+
+    border: var(--yellow) solid 5px;
     width: 90vw;
     max-width: 450px;
 
-    height: 70vw; 
-    max-height: 350px;
+    height: 80vw; 
+    max-height: 400px;
     background-color: var(--blue);
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;  
 
+    margin: 20px;
 }
 
 .row {
@@ -57,10 +68,20 @@
     border: black solid 2px;
 }
 
+.selector {
+    display: flex;
+    width: 4vw;
+    max-width: 25px;
+    height: 4vw;
+    max-height: 25px;
+    
+}
+
+
 .chat {
     display: flex;
 
-    border: yellow solid 2px;
+    border: var(--yellow) solid 5px;
     width: 90vw;
     max-width: 225px;
 
@@ -69,24 +90,57 @@
 
     background-color: var(--blue);
 
+    flex-direction: column;
+
+    padding: 10px;
     
+    margin: 20px;
+
+    justify-content: space-between;
 }
 
-.message {
-    width: 60vw;
-    max-width: 150px;
+/* .alert {
+    width:40%;    
+ } */
 
-    height: 7vw; 
-    max-height: 35px;
-
-    background-color: #000022;
-
-    justify-content: right;
+.chatMessages {
+    background-color: var(--blue);
+}
+.chatInput {
+    background-color: var(--blue);
 
 }
+
 
 .scoreboard {
-    border: green solid 2px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #19647E;
+    border: var(--yellow) solid 5px;
+
+    margin: 20px;
+    
+    width: 90vw;
+    max-width: 225px;
+
+    height: 70vw; 
+    max-height: 350px;
+
+    padding: 10px;
+
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.scoreboardTitle {
+    display: flex;
+}
+
+.topPlayers {
+    display: flex;
 }
 
 .yellowDot {
