@@ -1,3 +1,8 @@
+// Event messages
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
+
+
 class Button {
     constructor(id){
         this.elName = document.getElementById(id)
@@ -84,7 +89,11 @@ class playGame {
         this.sequence = [];
         this.currNum = 0;
         this.colors = ["green", "red", "blue", "yellow"]
+        this.socket = "";
+        
+        this.configureWebSocket();
         this.startGame()
+
     }
 
     getRandColor(){
@@ -108,8 +117,21 @@ class playGame {
         this.setScore(0)
         this.sequence = [];
         this.currNum = 0;
+        
+        // Let other players know a new game has started
+        // try {
+        //     this.broadcastEvent(this.getPlayerName(), GameStartEvent, {});
+        // } catch (err){
+        //     console.log(err)
+        // }
+//        this.broadcastEvent(this.getPlayerName(), GameStartEvent, {});
 
         this.round()
+    }
+
+    
+    getPlayerName() {
+        return localStorage.getItem('userName') ?? 'Mystery player';
     }
 
     async playSequence(){
@@ -152,6 +174,8 @@ class playGame {
         let gameScore = {name : playerName, score: this.score, date: date }
         let currScores = JSON.parse(localStorage.getItem('scores'));
         
+        this.broadcastEvent(playerName, GameEndEvent, gameScore);
+
         //
     
         try {
@@ -185,19 +209,70 @@ class playGame {
         
 
         alert("Game over, click to play again")
+
         this.startGame()
     }
 
-    
 
+    // Functionality for peer communication using WebSocket
 
+  configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    this.socket.onopen = (event) => {
+      this.displayMsg('system', 'game', 'connected');
+      console.log("opened")
+    };
+    this.socket.onclose = (event) => {
+      this.displayMsg('system', 'game', 'disconnected');
+      console.log("closed")
+
+    };
+    this.socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data.text());
+      if (msg.type === GameEndEvent) {
+        this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
+      } else if (msg.type === GameStartEvent) {
+        this.displayMsg('player', msg.from, `started a new game`);
+      }
+      console.log("message")
+
+    };
+  }
+
+  displayMsg(cls, from, msg) {
+    console.log("message")
+    const chatText = document.querySelector('#player-messages');
+
+    chatText.innerHTML =
+      `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` +
+      chatText.innerHTML;
+  }
+
+  broadcastEvent(from, type, value) {
+    const event = {
+      from: from,
+      type: type,
+      value: value,
+    };
+    console.log("sending", JSON.stringify(event) )
+    this.socket.send(JSON.stringify(event));
+    // this.socket.send(`{"msg":"testing"}`)
+  }
 }
+
+
+
+
 
 function clicked(button){
     buttons.flashMyButton(button)    
     game.checkClick(button)
  
 }
+
+
+
 
 function getPlayerName(){
     const playerName = localStorage.getItem('userName');
@@ -213,10 +288,18 @@ function getPlayerName(){
 }
 
 
+
+
 getPlayerName()
 
 var buttons = new Buttons();
 var game = new playGame();
+
+function resetGame(){
+
+   game.startGame()
+ 
+}
 
 
 
