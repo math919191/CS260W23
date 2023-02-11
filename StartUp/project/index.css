@@ -155,3 +155,7 @@ h1 {
 .emptyDot {
     background-color: var(--white);   
 }
+
+.btn, .btn-secondary {
+    background-color: var(--yellow) !important;
+}  

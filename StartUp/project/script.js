@@ -1,9 +1,7 @@
 
 class Game {
     constructor(){
-        this.board = [];
-        this.playerTurn = "yellow";
-        this.initBoard()
+        this.resetClicked()
     }
 
     startGame(){
@@ -34,6 +32,7 @@ class Game {
             this.board.push([])
             for (let j = 0; j < 6; j++){
                 this.board[i].push("blank");
+                this.changeDotColor(j,i,"blank")
             }   
         }
     }
@@ -54,8 +53,12 @@ class Game {
     changeDotColor(rowNum, colNum, color){
         const dot = document
                     .querySelector(`.row${rowNum+1}`)
-                    .querySelector(`.col${colNum+1}`)
-
+                    .querySelector(`.col${colNum+1}`);
+        
+        dot.classList.remove('redDot')
+        dot.classList.remove('yellowDot')
+        dot.classList.remove('blankDot')
+        
         dot.classList.add(`${color}Dot`)
         
     }
@@ -64,7 +67,12 @@ class Game {
         this.playerTurn = (this.playerTurn == "red") ? "yellow" : "red" ;
         
     }
+    resetClicked(){
+        this.board = [];
+        this.playerTurn = "yellow";
+        this.initBoard()
 
+    }
 }
 
 
@@ -73,4 +81,8 @@ var game = new Game();
 function rowClick(rowNum){
     game.rowClicked(rowNum)
     console.log(rowNum)
+}
+
+function resetClick(){
+    game.resetClicked()
 }

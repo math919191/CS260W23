@@ -14,7 +14,7 @@
     
     
     <link rel="stylesheet" href="index.css" />
-    <title>Rebekah Daniels</title>
+    <title>Konnekt4</title>
   </head>
   <body>
 
@@ -22,6 +22,7 @@
     <h1>Connect Four</h1>
 
     <div class="boardAndChatAndScore">
+        <div>
         <div class="gameBoard">
             <div class="row row0">
                 <button class="selector" onclick="rowClick(0)"></button>
@@ -32,21 +33,6 @@
                 <button class="selector" onclick="rowClick(5)"></button>
                 <button class="selector" onclick="rowClick(6)"></button>
 
-                <!-- <div class="selector"><button></button></div>
-                <div class="selector"><button></button></div>
-                <div class="selector"><button></button></div>
-                <div class="selector"><button></button></div>
-                <div class="selector"><button></button></div>
-                <div class="selector"><button></button></div>
-                <div class="selector"><button></button></div> -->
-
-                <!-- <div class="dot col1"><button></button></div>
-                <div class="dot col2"></div>
-                <div class="dot col3"></div>
-                <div class="dot col4"></div>
-                <div class="dot col5"></div>
-                <div class="dot col6"></div>
-                <div class="dot col7"></div> -->
             </div>
             <hr>
 
@@ -112,7 +98,11 @@
             </div>
             
         
+            
         </div>
+        <button type="button" class="btn btn-secondary" onclick="resetClick()">Reset Game</button>
+
+    </div>
 
         <div class="chat">
             <div class="chatMessages">
