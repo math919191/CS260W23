@@ -62,7 +62,7 @@ h1 {
     max-height: 50px;
 
 
-    background-color: var(--red);
+    background-color: var(--white);
     border-radius: 50%;
     /* display: inline-block; */
     border: black solid 2px;
@@ -146,6 +146,11 @@ h1 {
 .yellowDot {
     background-color: var(--yellow);   
 }
+
+.redDot {
+    background-color: var(--red);   
+}
+
 
 .emptyDot {
     background-color: var(--white);   
