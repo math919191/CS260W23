@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Neuton&family=Open+Sans&display=swap');
+
+:root {
+  --main: #274690;
+  --secondary: #ffffff;
+  --accent: #F6AE2D;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif !important;
+  /* background-color: var(--main) !important;
+  color: var(--secondary) !important; */
+}
+
+.content {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
