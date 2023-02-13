@@ -77,7 +77,7 @@
 - [ ] React components
 - [ ] React tic-tac-toe tutorial - I think this is great that they have to do this.
 - [ ] React reactivity - **used a hook before introducing them in the next reading** 
-- [ ] React CLI - This is incredible content. Very clear. I learned a lot reading through it. I've been doing a lot of stuff wrong with react cli based on what I read. I'm not sure if the students will understand the components across the different files. I think a simple video explaination with someone explaining what they are doing while creating a component (file creation / import / export / including it else where) would be extremely helpful.
+- [ ] React CLI - This is incredible content. Very clear. I learned a lot reading through it. I've been doing a lot of stuff wrong with react cli based on what I read. I'm not sure if the students will understand the components across the different files. **I think a simple video explaination with someone explaining what they are doing while creating a component (file creation / import / export / including it else where) would be extremely helpful.**  **Is there a debug react tutorial?**
 - [ ] React router
 - [ ] Simon react
 - [ ] Simon PWA
