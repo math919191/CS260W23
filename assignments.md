@@ -32,7 +32,7 @@
 - [x] CSS frameworks - I didn't change anything. [code pen](https://codepen.io/math919191/pen/vYaWKgW). In generally, bootstrap is great. I failed to realize that bootstrap's downfall is its popularity. It looks very similar throughout. Very interesting.
 - [x] Simon CSS - I did it! [my simon website](simon.rebekahdaniels.net) and [my simon css files](simon/simon-css/styles.css) . I am getting better at doing CSS. I know how to do all this CSS stuff on my own. I only referenced his code a few times. 
 - [x] UX design - I found the information about websites helpful, even though I've seen it a few times. Here is an [interesting website](https://github.com/) that I liked. It is github's homepage. It is very useable and I can get to what I want to from it. It would be nice, however, if they had a feature to list the most recent repos, not the most used. (CS235 repo keeps coming up, even though I probably won't ever use that repo again.) 
-- [ ] Start up HTML and CSS - I'll come back if I have time.
+- [x] Start up HTML and CSS - I'll come back if I have time. I've been working on this on my own time. This is what it looks [like](startup.rebekahdaniels.net)! -- I'm quite please with how it looks. I tried to keep it simple. The more you work with CSS the easier it gets (:. It was a neat realization when I tried to add the reset button just how quickly I was able to do that. I knew how the divs should go to be able to set up the webpage.
 
 # JavaScript
 ### I am familiar with all of the following things in Javascript. I will come back if I have time. 
@@ -51,7 +51,7 @@
 
 - [x] Simon Javascript part 1 - simon.rebekahdaniels.net/play.html - I got the basic js working! I haven't gotten the login or the scores to populate on the other pages. Overall, I'm really pleased that I was able to do that. It took roughly 2 hours to complete some of the basic logic for the simon itself. I didn't understand all of what the code did in the professors' example.
 - [x] simon js part 2 - I need to populate the score and the names 
-- [ ] Start up Javascript - I'll come back if I have time.
+- [x] Start up Javascript - I have very basic javascript supporting game play. It looks like [this](startup.rebekahdaniels.net)! It is very simple, and I will add to it. But I think I want to convert to react before adding the rest of the features to save some time and get better at React. Adding functionality to the reset button took a surprising amount of time. I just was passing in the wrong parameters and mixed up i and j! It was satisfying to figure it out. I was able to figure it out because of git and version control. This was also neat to realize the value of git. 
 
 # Midterm
 
@@ -68,16 +68,16 @@
 - [x] Account creation and login - I did it! Most of the backend stuff made sense. I need to look into it a little more though. The Node packages are extremely useful. 
 - [x] Simon Login - I did it! It took longer than I thought it would but it was extremely informative in trying to do it on my own. I ran into a few issues while working on it, but I was able to work through all of them! I figured out how to debug with them on the same port, I don't know why that was causing me so much trouble earlier. I learned about text decoration none to be able to choose which login screen people see. I learned more about databases and inserting into them. I learned more about the debuggers and how powerful those tools are. It was interesting following things through 4 different files to be able to do something to be able to keep the different functionalities partitioned (eg `button in html -> login.js -> index.js -> database.js`). 
 - [x] Websocket chat - There was quite of bit of stuff but it made sense!
-- [ ] Simon websocket - It looks doable! It isn't as complicated as I though it was. Super neat!
+- [x] Simon websocket - It looks doable! It isn't as complicated as I though it was. Super neat! -- haha, it was harder to get working than I originally thought. Somehow I was calling broadcast before it connected...whoops. I don't know how though. Lots of learning though. I'm getting better with the google debugger and using the network tab and using nodemon.
 - [ ] Start up service - Will come back if there is time.
 
 # Web frameworks, mobile, and security
 
-- [ ] React components
-- [ ] React tic-tac-toe tutorial
-- [ ] React reactivity
-- [ ] React CLI
-- [ ] React router
+- [x] React components - [my code pen](https://codepen.io/math919191/pen/YzjmWzL)
+- [x] React tic-tac-toe tutorial - [my code pen](https://codepen.io/math919191/pen/abaoRpg?editors=0010) I learned that there are NO COMMAS BETWEEN PROPS when passing them in! This was actually a really good review of react. This is probably my 3rd time doing this tutorial, but it was extremely helpful because I have learned a lot since doing that tutorial. I better understand why they talk about immutability and moving functionality up to higher components. I also am much more familiar with ternary operators now. I understood every single line of code which was actually really neat. I could probably go through it again and learn eve more.  
+- [x] React reactivity - [my code pen](https://codepen.io/math919191/pen/eYLOQbB?editors=0010) I changed one syntax thing. It was interesting to observe a different style of react. I think I would have written it differently. I liked the color input, I like the simple HTML. 
+- [x] React CLI - see testreact in WebServies folder - I liked this of React CLI. I learned a bunch about CLI that I've been doing wrong. I created a bunch of spinning blue circles using components. 
+- [ ] React router - __I need to come back to this one later.__
 - [ ] Simon react
 - [ ] Simon PWA
 - [ ] Start up Final
