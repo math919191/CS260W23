@@ -77,7 +77,7 @@
 - [x] React tic-tac-toe tutorial - [my code pen](https://codepen.io/math919191/pen/abaoRpg?editors=0010) I learned that there are NO COMMAS BETWEEN PROPS when passing them in! This was actually a really good review of react. This is probably my 3rd time doing this tutorial, but it was extremely helpful because I have learned a lot since doing that tutorial. I better understand why they talk about immutability and moving functionality up to higher components. I also am much more familiar with ternary operators now. I understood every single line of code which was actually really neat. I could probably go through it again and learn eve more.  
 - [x] React reactivity - [my code pen](https://codepen.io/math919191/pen/eYLOQbB?editors=0010) I changed one syntax thing. It was interesting to observe a different style of react. I think I would have written it differently. I liked the color input, I like the simple HTML. 
 - [x] React CLI - see testreact in WebServies folder - I liked this of React CLI. I learned a bunch about CLI that I've been doing wrong. I created a bunch of spinning blue circles using components. 
-- [ ] React router - [my code pen](https://codepen.io/math919191/pen/GRXgNJg) I added a route. I did the [basic router example using CLI](./WebServies/react-router-example/) using the website that was given.
+- [ ] React router - [my code pen](https://codepen.io/math919191/pen/GRXgNJg) I added a route. I did the [basic router example using CLI](./WebServies/react-router-example/) using the website that was given. There was a interesting things about the router that I didn't know. You can use items in the url to render dynamic pages, nest routes, create sidebars etc. 
 - [ ] Simon react
 - [ ] Simon PWA
 - [ ] Start up Final
