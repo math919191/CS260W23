@@ -1,10 +1,11 @@
 import React from 'react';
 
 export function Scores() {
+
   return (
-    <div class="content">
-      <table border="2" class="table table-striped">
-        <thead class="thead-dark">
+    <div className="content">
+      <table border="2" className="table table-striped">
+        <thead className="thead-dark">
           <tr>
             <th scope="col">#</th>
 
@@ -17,8 +18,6 @@ export function Scores() {
                                           
         </tbody>
       </table>
-
-
   </div>
 
   );

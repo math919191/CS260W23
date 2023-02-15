@@ -5,7 +5,7 @@ import { PlayControls } from './loginElements/playControls';
 export function Login(props) {
   
   return (
-    <div class="content">
+    <div className="content">
       <h1>Welcome To Simon</h1>
       
       {props.loggedIn ?   <PlayControls/> : <LoginControls />}

@@ -3,43 +3,43 @@ import "../css/play.css"
 
 export function Play() {
   return (
-  <div class="content">
+  <div className="content">
 
-    <div class="players">
+    <div className="players">
       Player
-      <span class="playerName" id="playerName"></span>
+      <span className="playerName" id="playerName"></span>
       <div id="player-messages">messages</div>
     </div>
     
-    <div class="game">
+    <div className="game">
 
           <div>
               <button 
                 id="green" 
-                class="top-left-quarter-circle"
-                onclick="clicked('green')"
+                className="top-left-quarter-circle"
+                onClick="clicked('green')"
                 ></button>            
               
               <button 
               id="red" 
-              class="top-right-quarter-circle"
-              onclick="clicked('red')"
+              className="top-right-quarter-circle"
+              onClick="clicked('red')"
                 ></button>
               
               <br/>
               
-              <button id="blue" class="bottom-left-quarter-circle" onclick="clicked('blue')"
+              <button id="blue" className="bottom-left-quarter-circle" onClick="clicked('blue')"
               ></button>
               
-              <button id="yellow" class="bottom-right-quarter-circle" onclick="clicked('yellow')"
+              <button id="yellow" className="bottom-right-quarter-circle" onClick="clicked('yellow')"
               ></button>
           </div>
-          
-          <div class="game-controls">
-              <div class="score-and-reset">
+
+          <div className="game-controls">
+              <div className="score-and-reset">
               <p>Score: <div id="score">0</div></p>
 
-              <button id="reset" type="button" class="btn btn-primary" onclick="resetGame()">Reset</button>
+              <button id="reset" type="button" className="btn btn-primary" onClick="resetGame()">Reset</button>
               </div>
           </div>
           
