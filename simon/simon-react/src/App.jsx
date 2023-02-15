@@ -1,4 +1,5 @@
 import './css/App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Router, Route, Routes } from 'react-router-dom';
@@ -10,8 +11,8 @@ import {About} from "./pages/about"
 import {NotFound} from "./pages/notFound"
 
 
-import Menu from './components/Menu'
-import Footer from './components/Footer'
+import Menu from './maincomponents/Menu'
+import Footer from './maincomponents/Footer'
 
 function App() {
   return (
