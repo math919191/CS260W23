@@ -1,6 +1,7 @@
 {
   "name": "simon-react",
   "version": "0.1.0",
+  "proxy": "http://localhost:3000",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.2.3",

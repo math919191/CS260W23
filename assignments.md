@@ -78,7 +78,15 @@
 - [x] React reactivity - [my code pen](https://codepen.io/math919191/pen/eYLOQbB?editors=0010) I changed one syntax thing. It was interesting to observe a different style of react. I think I would have written it differently. I liked the color input, I like the simple HTML. 
 - [x] React CLI - see testreact in WebServies folder - I liked this of React CLI. I learned a bunch about CLI that I've been doing wrong. I created a bunch of spinning blue circles using components. 
 - [ ] React router - [my code pen](https://codepen.io/math919191/pen/GRXgNJg) I added a route. I did the [basic router example using CLI](./WebServies/react-router-example/) using the website that was given. There was a interesting things about the router that I didn't know. You can use items in the url to render dynamic pages, nest routes, create sidebars etc. 
-- [ ] Simon react
+- [ ] Simon react - 
+  - Monday 2/13 (1 hour ish -- mostly being stuck on the router cause I didn't read the material well enough)
+    - created the basic structure and started on trying to get the router to work
+  - Wednesday 2/15 (2 ish hours)
+    - I was doing the browser router very very wrong, but I figured it out! (: I need to read the material
+    - I moved all of the HTML over. This was actually very easy.  
+    - I ended up organizing my code very differently than the professor did. This is due to my lack of experience and also because this is roughly how CS 240 did their structure (I'm in that class right now)
+    - I got very confused with some of the ports and how they actually worked versus how I thought they were working. I think I figured it out...I think I was trying to get the scores before getting an auth token and that is why I was having issues getting anything back.
+
 - [ ] Simon PWA
 - [ ] Start up Final
 - [ ] Demo day submission
