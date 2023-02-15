@@ -67,7 +67,7 @@
 - [ ] Simon DB
 - [ ] Account creation and login
 - [ ] Simon Login - I copied parts of code, but for the most part typed it out and tried to understand and come up with stuff on my own. The modal for bootstrap for the error message was giving me trouble, I might have messed something up while copying code. The login button didn't seem to work unless you cleared the storage when you logged out. I also don't know if that is me copying code incorrectly. 
-- [ ] Debugging Websocket chat - seemingly simple! The video/gif was super helpful! I wonder if there is a way to implement more of them. 
+- [ ] Debugging Websocket chat - seemingly simple! The video/gif was super helpful! I wonder if there is a way to implement more videos. 
 - [ ] Websocket Chat - I did it! 
 - [ ] Simon websocket
 - [ ] Start up service
@@ -77,8 +77,9 @@
 - [ ] React components
 - [ ] React tic-tac-toe tutorial - I think this is great that they have to do this.
 - [ ] React reactivity - **used a hook before introducing them in the next reading** 
+- [ ] React hooks - I am still confused on the use effect hook 
 - [ ] React CLI - This is incredible content. Very clear. I learned a lot reading through it. I've been doing a lot of stuff wrong with react cli based on what I read. I'm not sure if the students will understand the components across the different files. **I think a simple video explaination with someone explaining what they are doing while creating a component (file creation / import / export / including it else where) would be extremely helpful.**  **Is there a debug react tutorial?**
-- [ ] React router
+- [ ] React router - **this might be difficult to move to CLI** this was a huge sticking point last semester. It might be a good idea to require a screenshot showing they were able to get it working locally as well as on code pen. (at least to the basic routing) I started working on simon react and then got stuck on react browser and needed to come back even though I thought I understood at least the basics.
 - [ ] Simon react
 - [ ] Simon PWA
 - [ ] Start up Final
