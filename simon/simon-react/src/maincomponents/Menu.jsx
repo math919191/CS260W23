@@ -1,6 +1,6 @@
 import { NavLink, Link, Outlet} from 'react-router-dom';
 
-function Menu() {
+function Menu(props) {
 
   return (
     <>
@@ -15,13 +15,18 @@ function Menu() {
             <li className="nav-item active">
               <NavLink className='nav-link' to=''>Simon</NavLink>
             </li>
-            <li className="nav-item">
-              <Link className='nav-link' to='/play'>Play</Link>
 
-            </li>
-            <li className="nav-item">
-              <NavLink className='nav-link' to='/scores'>Scores</NavLink>
-            </li>
+            { props.authState && 
+              <li className="nav-item">
+                <Link className='nav-link' to='/play'>Play</Link>
+
+              </li>
+            }
+            { props.authState && 
+              <li className="nav-item">
+                <NavLink className='nav-link' to='/scores'>Scores</NavLink>
+              </li>  
+            }
             <li className="nav-item">
               <NavLink className='nav-link' to='/about'>About</NavLink>
             </li>
