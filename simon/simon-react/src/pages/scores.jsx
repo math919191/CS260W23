@@ -6,15 +6,21 @@ export function Scores() {
 
 
   useEffect( () => {
-
     const fetchData = async () => {
+      let scores = [];
       let response = await fetch('/api/scores');
-      let scores = await response.json();
-      // localStorage.setItem('scores', JSON.stringify(scores));
-      console.log(scores)
+
+      if (response.status == 200){
+        scores = await response.json();
+        localStorage.setItem('scores', JSON.stringify(scores));
+      } else {
+        let scoresFromStorage = localStorage.getItem("scores"); 
+        if (scoresFromStorage){
+          scores = JSON.parse(scoresFromStorage)
+        }
+      } 
       setScores(scores)
     }
-
     fetchData().catch(console.error)
   }, [])
 
@@ -28,10 +34,21 @@ export function Scores() {
             <th scope="col">Score</th>
             <th scope="col">Date</th>
           </tr>
+
+          
         </thead>
 
         <tbody id="tableBody">
-                                          
+          {scores.map((item, key) => {
+            return (
+              <tr key={key + 1}>
+                <td>{key}</td>
+                <td>{item.name}</td>
+                <td>{item.score}</td>
+                <td>{item.date}</td>
+              </tr>
+            )
+          })}                             
         </tbody>
       </table>
   </div>
