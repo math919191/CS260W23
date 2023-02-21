@@ -1,6 +1,44 @@
+import {React, useState, useEffect, AuthState,  forwardRef, useRef, useImperativeHandle } from 'react';
+// import {} from 'react';
 
     
-export function SimonButton(props){
+const SimonButton = forwardRef((props, ref) => {
+//    const Child = forwardRef((props, ref) => {
+
+    const [flashOn, setFlashOn] = useState(false);
+
+
+    useImperativeHandle(ref, () => ({
+
+        getAlert() {
+          alert("getAlert from Child");
+        },
+        
+        async flash(){
+            await flash();
+        }
+
+      }));
+
+
+    function delay(milliseconds) {
+        return new Promise((resolve) => {
+          setTimeout(resolve, milliseconds);
+        });
+    }
+
+    
+    async function flash(){
+        setFlashOn(true);
+        await delay(500);
+        setFlashOn(false);
+    }
+
+
+    function handleClick(){
+        props.clickFunction(props.color)
+        flash()
+    }
 
     function getCSSClass(color){
         switch(color) {
@@ -19,17 +57,19 @@ export function SimonButton(props){
             default:
                 return "";
           }
-    } 
-
+    }
+    
     return (
         <>
             <button 
                 id={props.color} 
-                className={getCSSClass(props.color)}
-                onClick={() => props.clickFunction(props.color)}
+                className={getCSSClass(props.color) + " " +(flashOn ? "flash-on" : "")}
+                onClick={() => handleClick()}
             ></button>            
  
         </>
     )
 
-}
+})
+
+export {SimonButton};

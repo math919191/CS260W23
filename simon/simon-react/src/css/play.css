@@ -1,3 +1,4 @@
+
 .top-left-quarter-circle {
     width: 20vh;
     height: 20vh;
@@ -55,4 +56,11 @@
 
   padding: 25px;
   border: black 2px solid;
+}
+
+
+.flash-on {
+  border: 2px black solid;
+  opacity: 50%;
+  /* background-color: pink; */
 }
