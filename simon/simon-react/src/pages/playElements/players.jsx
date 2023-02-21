@@ -1,9 +1,8 @@
 
-export function Players(){
+export function Players(props){
     return (
     <div className="players">
-        Player
-        <span className="playerName" id="playerName"></span>
+        <p>Player {props.username}</p>
         <div id="player-messages">messages</div>
     </div>
 )

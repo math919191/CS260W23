@@ -1,31 +1,17 @@
 import {React, useState, useEffect, AuthState,  forwardRef, useRef, useImperativeHandle } from 'react';
-// import {} from 'react';
+import { delay } from './play';
 
-    
 const SimonButton = forwardRef((props, ref) => {
-//    const Child = forwardRef((props, ref) => {
 
     const [flashOn, setFlashOn] = useState(false);
 
 
     useImperativeHandle(ref, () => ({
-
-        getAlert() {
-          alert("getAlert from Child");
-        },
-        
         async flash(){
             await flash();
         }
 
       }));
-
-
-    function delay(milliseconds) {
-        return new Promise((resolve) => {
-          setTimeout(resolve, milliseconds);
-        });
-    }
 
     
     async function flash(){
