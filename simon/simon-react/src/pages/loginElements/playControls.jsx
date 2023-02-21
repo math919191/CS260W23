@@ -21,7 +21,7 @@ export function PlayControls(props) {
       <p>Welcome {props.username}!</p>
       <button type="button" className="btn btn-primary btn-block mb-4">
         <Link className='nav-link' to='/play'>Play</Link>
-        </button>
+      </button>
 
 
       <button type="button" className="btn btn-secondary btn-block mb-4" onClick={()=>logOut()}>Logout</button>
