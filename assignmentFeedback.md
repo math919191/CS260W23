@@ -80,7 +80,10 @@
 - [ ] React hooks - I am still confused on the use effect hook 
 - [ ] React CLI - This is incredible content. Very clear. I learned a lot reading through it. I've been doing a lot of stuff wrong with react cli based on what I read. I'm not sure if the students will understand the components across the different files. **I think a simple video explaination with someone explaining what they are doing while creating a component (file creation / import / export / including it else where) would be extremely helpful.**  **Is there a debug react tutorial?**
 - [ ] React router - **this might be difficult to move to CLI** this was a huge sticking point last semester. It might be a good idea to require a screenshot showing they were able to get it working locally as well as on code pen. (at least to the basic routing) I started working on simon react and then got stuck on react browser and needed to come back even though I thought I understood at least the basics.
-- [ ] Simon react
+- [ ] Simon react - Overall, it was an adventure to implement this. The assignment readme repository has more information about how long it took me to do things and what I struggled with. This may be a good indication for what students might struggle with as well. 
+  It took a lot longer than I thought it would. I learned a lot. I think students will struggle or maybe not do it at all because it is towards the end of the semester and students know what grade they can get without doing it. I think it is an incredibly valuable exercise, but most students probably won't take the time to do it.
+  I think ports will difficult for a lot of students because they haven't seen them before. 
+
 - [ ] Simon PWA
 - [ ] Start up Final
 - [ ] Demo day submission

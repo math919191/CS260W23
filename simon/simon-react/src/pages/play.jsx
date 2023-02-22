@@ -47,6 +47,7 @@ export function Play(props) {
   async function flashButton(color){
     console.log(color);
     await getButtonFromColor(color).current.flash();
+    await delay(300)
   }
 
   function reset(){

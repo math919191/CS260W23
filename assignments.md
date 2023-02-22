@@ -78,7 +78,7 @@
 - [x] React reactivity - [my code pen](https://codepen.io/math919191/pen/eYLOQbB?editors=0010) I changed one syntax thing. It was interesting to observe a different style of react. I think I would have written it differently. I liked the color input, I like the simple HTML. 
 - [x] React CLI - see testreact in WebServies folder - I liked this of React CLI. I learned a bunch about CLI that I've been doing wrong. I created a bunch of spinning blue circles using components. 
 - [ ] React router - [my code pen](https://codepen.io/math919191/pen/GRXgNJg) I added a route. I did the [basic router example using CLI](./WebServies/react-router-example/) using the website that was given. There was a interesting things about the router that I didn't know. You can use items in the url to render dynamic pages, nest routes, create sidebars etc. 
-- [ ] Simon react - 
+- [ ] Simon react - about 9 ish hours to complete
   - Monday 2/13 (1 hour ish -- mostly being stuck on the router cause I didn't read the material well enough)
     - created the basic structure and started on trying to get the router to work
   - Wednesday 2/15 (2 ish hours)
@@ -102,8 +102,8 @@
   - Tuesday 2/21 during class (1 hour)
     - implemented a lot of logic
     - got stuck because react hooks don't always immediately update
-  - Wedensday 2/23 - 1 hour ish
-    - Finished implementing the logic. The react hooks are freaking confusing. The use effect finally makes a little bit more sense. I had to copy more of the professors' code than I would have liked. I did it tho!
+  - Wedensday 2/22 - 1 hour ish
+    - Finished implementing the logic. The react hooks are very confusing. The use effect finally makes a little bit more sense. I had to copy more of the professors' code than I would have liked. I did it tho!
 - [ ] Simon PWA
 - [ ] Start up Final
 - [ ] Demo day submission
