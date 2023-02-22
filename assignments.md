@@ -86,7 +86,24 @@
     - I moved all of the HTML over. This was actually very easy.  
     - I ended up organizing my code very differently than the professor did. This is due to my lack of experience and also because this is roughly how CS 240 did their structure (I'm in that class right now)
     - I got very confused with some of the ports and how they actually worked versus how I thought they were working. I think I figured it out...I think I was trying to get the scores before getting an auth token and that is why I was having issues getting anything back.
-
+  - Friday 2/17 (started at 10:53 ish ) - 2ish hours
+    - a page on import statements in React CLI ? 
+    - notes on folder organization? What's the right way? there isn't one...
+    - onAuthChange() in app.jsx I hadn't seen before -- haha that's a function that was written that I never found. 
+    - why react.useState instead of useState on line 10 of login/unauthenticated.jsx?
+    - I got the login and logout working as well as loading the scores.
+    - the scores seemed SO much easier to load with react than js. Geeks for geeks came in clutch (:. 
+    - My instance broke. I don't know why. It said it crashed 2/16, but I didn't do ANYTHING with it that day. I stopped and started it, and then it started working again. SUPER odd.
+  - Tuesday 2/21 - Started 10:45 ish (1.5 hour ish)
+    - I seperated everything into individual components for the play page.
+    - "React refs so the game can drive button press events" in simonbutton doesn't make sense
+    - That line makes a little more sense now. Most of the time today was spent just trying to get the buttons to flash by using the parent component. This was much more difficult that I anticipated, but I did it! I referenced the given code quite a bit, but I couldn't figure out what it was doing. It finally clicked after a lot of googling on how to call child functions and a good example of how to "useImperativeHandle" was given. The stackoverflow was incredibly helpful for figuring it out.
+    - I also checked out a branch! I thought I was gonna ruin it, so I made a branch and merged it back it, that was pretty neat, and I think I'll end up using that more in the future. 
+  - Tuesday 2/21 during class (1 hour)
+    - implemented a lot of logic
+    - got stuck because react hooks don't always immediately update
+  - Wedensday 2/23 - 1 hour ish
+    - Finished implementing the logic. The react hooks are freaking confusing. The use effect finally makes a little bit more sense. I had to copy more of the professors' code than I would have liked. I did it tho!
 - [ ] Simon PWA
 - [ ] Start up Final
 - [ ] Demo day submission

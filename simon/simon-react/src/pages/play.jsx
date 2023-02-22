@@ -1,4 +1,4 @@
-import {React, useState, forwardRef, useRef, useImperativeHandle } from 'react';
+import {React, useState, useEffect, forwardRef, useRef, useImperativeHandle } from 'react';
 import { Players } from './playElements/players';
 import "../css/play.css"
 import { SimonButton } from './playElements/simonButton';
@@ -9,14 +9,15 @@ import { getRandomColor, saveScore, delay } from './playElements/play';
 export function Play(props) {
 
   const [score, setScore] = useState(0);
-  // const [sequence, setSequence] = useState([]);
-  // const [currNumInSeq, setCurrNumInSeq] = useState(0);
-  const [gameIsOver, setGameIsOver] = useState(false);
+  const [sequence, setSequence] = useState([]);
+  const [currNumInSeq, setCurrNumInSeq] = useState(0);
+  const [allowPlayer, setAllowPlayer] = useState(false);
 
-  let sequence = [];
-  function setSequence(seq){sequence = seq}
-  let currNumInSeq = 0;
-  function setCurrNumInSeq(num){currNumInSeq = num}
+  // let sequence = [];
+  // function setSequence(seq){sequence = seq}
+
+  // let currNumInSeq = 0;
+  // function setCurrNumInSeq(num){currNumInSeq = num}
 
 
   const greenButton = useRef();
@@ -46,7 +47,6 @@ export function Play(props) {
   async function flashButton(color){
     console.log(color);
     await getButtonFromColor(color).current.flash();
-
   }
 
   function reset(){
@@ -59,23 +59,26 @@ export function Play(props) {
   }
 
   function onButtonClick(color){
-    
     flashButton(color);
-    
     if (color != sequence[currNumInSeq]){
+      console.log("color: ", color)
+      console.log(sequence)
+      console.log(currNumInSeq)
       endGame();
     } else {
-
         if (currNumInSeq+1 == sequence.length){
-          setCurrNumInSeq(currNumInSeq => currNumInSeq+1);
+          setCurrNumInSeq(0);
           playRound();
           setScore(score+1);
+        } else {
+          setCurrNumInSeq(currNumInSeq+1);
+
         }
     }
   }
 
   function startGame(){
-    setGameIsOver(false);
+    setAllowPlayer(false);
     setScore(0);
     setSequence([]);
     setCurrNumInSeq(0);
@@ -85,27 +88,41 @@ export function Play(props) {
 
   function endGame(){
     saveScore(score)
-    setGameIsOver(true);
+    setAllowPlayer(true);
     alert("Game over, click reset to play again")
   }
 
   async function playRound(){
     let newSeq =  [...sequence, getRandomColor()];
     setSequence(newSeq);
-    setCurrNumInSeq(0);
-    await delay(1000);
     console.log("playing sequence")
-    await playSequence(newSeq)
+    //The sequence should play because sequence was changed, relying on the useEffect
+    //await playSequence(newSeq)
   }
 
-  async function playSequence(sequence){
-    console.log(sequence)
-    for (let i = 0; i < sequence.length; i++){
-      await flashButton(sequence[i]);
-      console.log("flashed ", sequence[i])
-    }    
-  }
+  // async function playSequence(sequence){
+  //   console.log(sequence)
+  //   for (let i = 0; i < sequence.length; i++){
+  //     await flashButton(sequence[i]);
+  //     console.log("flashed ", sequence[i])
+  //   }    
+  // }
 
+
+  useEffect(() => {
+    if (sequence.length > 0) {
+      const playSequence = async () => {
+        await delay(500);
+        console.log(sequence)
+        for (let i = 0; i < sequence.length; i++){
+          await flashButton(sequence[i]);
+        }    
+  
+        setAllowPlayer(true);
+      };
+      playSequence();
+    }
+  }, [sequence]);
 
   return (
   <div className="content">
