@@ -1,14 +1,13 @@
-import './App.css';
-import {Login} from './login/login'
-import {Play} from './login/login'
+import {Routes, Route} from 'react';
+import {PlayPage} from './play/playPage'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css'
 
 function App() {
   return (
     <div className="App">
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/books" element={<Play />} />
-    </Routes>
+      <PlayPage/>
     </div>
   );
 }

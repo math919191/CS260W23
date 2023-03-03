@@ -1,0 +1,35 @@
+:root {
+    --blue: #19647E;
+    --red: #D72638;
+    --yellow: #FCBA04;
+    --white: #FBF5F3;
+    --black: #000022;
+  }
+
+
+* {
+    background-color: var(--white);
+    text-align: center;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.playPage {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--white);
+}
+
+h1 {
+    color: #19647E ;
+}
+
+
+.btn, .btn-secondary {
+    background-color: var(--yellow) !important;
+}  
+
