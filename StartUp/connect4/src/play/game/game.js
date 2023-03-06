@@ -22,53 +22,71 @@ class Game extends Component {
         return current.pieces.slice();
     }
 
+    deepCopy(item){
+        return JSON.parse(JSON.stringify(item));
+    }
+
+    addBoardToHistory(board){
+        const history = this.state.history;
+
+        history.push({pieces: board})
+        this.setState({
+            history: history
+        })
+
+    }
 
     changePieceColor(col, row, newColor){
         
-        let current = this.getCurrentPieces();
+        //gets a deep copy of the current pieces
+        let current = this.deepCopy(this.getCurrentPieces());
         current[col][row] = newColor;
 
-        const history = this.state.history;
+        this.addBoardToHistory(current);
 
-        this.setState({
-            history: history.concat([{
-              pieces: current,
-            }]),
-        });
     }
 
     changeTopPieceInCol(colNum, newColor){
         const col = this.getCurrentPieces()[colNum];
-        let row;
-        for (let i = col.length; i >= 0; i--){
+        let row = -1;
+        for (let i = 0; i < col.length; i++){
+            
             if (col[i] == "white"){
                 row = i;
+                break;
             }
         }
-        this.changePieceColor(colNum, row, newColor);
+        
+        if (row != -1){
+            this.changePieceColor(colNum, row, newColor);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     resetGame(){
         //set pieces to white
         const blankBoard = Array(7).fill().map(() => Array(6).fill("white"));
         //this.setState({pieces: blankBoard})
-        this.setState({history: [{pieces: blankBoard}]})
-        //would allow undo
-        // const history = this.state.history;
-
-        // this.setState({
-        //     history: history.concat([{
-        //       pieces: blankBoard,
-        //     }]),
-        // });
+        this.setState({
+            history: [{pieces: blankBoard}],
+            stepNum: 0,
+        })
 
     }
 
     handleBoardClick(i){
         
-        this.setState({currPlayer: this.state.currPlayer == "red" ? "yellow": "red"});
+        const success = this.changeTopPieceInCol(i, this.state.currPlayer)
+        if (success){
+            this.setState(
+                {
+                    currPlayer: this.state.currPlayer == "red" ? "yellow": "red",
+                    stepNum : this.state.stepNum + 1,
+                });    
+        }
 
-        this.changeTopPieceInCol(i, this.state.currPlayer)
     }
 
     handleResetClick(){
@@ -77,21 +95,16 @@ class Game extends Component {
 
     handleUndoClick(){
         const history = this.state.history;
+        this.setState({history: this.state.history.splice(0, this.state.history.length-1)})
         this.setState({stepNum : this.state.stepNum - 1})
-        // const test = history.slice(0, history.length-1)
-        // debugger
-        // this.setState({
-        //     history: test,
-        // });
-
-        
     }
 
     
     render(){
 
         const history = this.state.history;
-        const current = history[history.length - 1];
+        
+        const current = history[this.state.stepNum];
 
         return (
             <>
