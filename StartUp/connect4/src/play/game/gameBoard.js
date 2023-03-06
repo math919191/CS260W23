@@ -9,13 +9,11 @@ class GameBoard extends Component {
 
     
     renderColumn(i){
-        // debugger
         return (
             <Column 
                 key={"column"+i}
                 column={this.props.columns[i]}
                 onClick={() => this.props.onClick(i)}
-
             />
         )
     }
