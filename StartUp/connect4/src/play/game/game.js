@@ -1,7 +1,8 @@
 import {GameBoard} from './gameBoard'
 import { Controls } from './controls'
 import { Component } from 'react';
-
+import { checkWin } from './checkWin';
+import WinMessage from './winMessage';
 
 class Game extends Component {
     constructor(props){
@@ -11,7 +12,8 @@ class Game extends Component {
                 {pieces: Array(7).fill().map(() => Array(6).fill("white"))}
             ],
             stepNum: 0,
-            currPlayer: "red",   
+            currPlayer: "red",
+            showWinMessage: false,   
         }
     }
     
@@ -87,6 +89,15 @@ class Game extends Component {
                 });    
         }
 
+        let winner = checkWin(this.state.history.slice(-1)[0].pieces); 
+
+        
+        if (!!winner){
+            this.setState({showWinMessage: true})
+            console.log("WINNER")
+            console.log(winner)
+        }
+    
     }
 
     handleResetClick(){
@@ -99,6 +110,10 @@ class Game extends Component {
         this.setState({stepNum : this.state.stepNum - 1})
     }
 
+    handleCloseMessage(){
+        this.setState({showWinMessage : false})
+    }
+
     
     render(){
 
@@ -109,6 +124,14 @@ class Game extends Component {
         return (
             <>
                 <div className='game'>
+                    <WinMessage 
+                        // show={this.state.showWinMessage}
+                        // onClick={ ()=> this.handleCloseMessage() }
+
+                       //     show={modalShow}
+                        //     onHide={() => setModalShow(false)}
+                    />
+
                     <GameBoard
                         columns={current.pieces}
                         onClick={i => this.handleBoardClick(i)}

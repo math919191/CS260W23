@@ -3,6 +3,7 @@ import {Row} from './row'
 import {Dot} from './dot'
 import { Column } from './Column';
 import {React, Component} from 'react';
+import WinMessage from './winMessage';
 
 
 class GameBoard extends Component {
@@ -31,6 +32,7 @@ class GameBoard extends Component {
         return (
             <div className='gameBoard'>
                 {this.renderColumns()}
+                
             </div>
         )    
     }

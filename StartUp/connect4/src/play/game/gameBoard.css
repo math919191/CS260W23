@@ -13,6 +13,9 @@
     justify-content: space-around;  
 
     margin: 20px;
+
+    position: relative;
+
 }
 
 .row {
@@ -63,11 +66,5 @@
 .invisibleDot {
     background-color: var(--blue);
     border: none;
-
-    /* adjusts the sizing */
-    /* width: 4.5vw;
-    max-width: 25px;
-    height: 4.5vw;
-    max-height: 25px; */
-
 }
+
