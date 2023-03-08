@@ -51,6 +51,24 @@
 
 }
 
+.nextDot {
+    display: flex;
+    /* width: 9vw;
+    max-width: 50px;
+    height: 9vw;
+    max-height: 50px; */
+    width : 30px;
+    height: 30px;
+    background-color: var(--white);
+
+    margin-bottom: auto;
+    border-radius: 50%;
+    /* display: inline-block; */
+    border: black solid 2px;
+
+}
+
+
 .yellowDot {
     background-color: var(--yellow);   
 }

@@ -8,7 +8,8 @@ import './app.css'
 function App() {
   return (
     <div className="App">
-
+      <br/>
+      <h1>Connect 4</h1>
       <PlayPage/>
     </div>
   );

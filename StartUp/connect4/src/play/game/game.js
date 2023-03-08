@@ -126,6 +126,8 @@ class Game extends Component {
         const history = this.state.history;
         this.setState({history: this.state.history.splice(0, this.state.history.length-1)})
         this.setState({stepNum : this.state.stepNum - 1})
+        this.setState({currPlayer: this.state.currPlayer == "red" ? "yellow": "red"})
+        
     }
 
     handleCloseMessage(){
@@ -154,12 +156,11 @@ class Game extends Component {
                     />
 
                     <PlayerScores 
-                        player1={"Jonny"}
+                        player1={"Red"}
                         player1Score={this.state.winCount.red}
-                        player2={"Jill"}
+                        player2={"Yellow"}
                         player2Score={this.state.winCount.yellow}
                         upNextColor={this.state.currPlayer}
-                        upNextPlayer={"jonny"}
 
                     />
                     <Controls
