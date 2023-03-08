@@ -3,6 +3,7 @@ import { Controls } from './controls'
 import { Component } from 'react';
 import { checkWin } from './checkWin';
 import WinMessage from './winMessage';
+import PlayerScores from './playerScores';
 
 class Game extends Component {
     constructor(props){
@@ -13,7 +14,10 @@ class Game extends Component {
             ],
             stepNum: 0,
             currPlayer: "red",
-            showWinMessage: false,   
+            showWinMessage: false,
+            winner: "none",
+            winCount: {red: 0, yellow: 0},   
+            canPlay: true,
         }
     }
     
@@ -74,31 +78,45 @@ class Game extends Component {
         this.setState({
             history: [{pieces: blankBoard}],
             stepNum: 0,
+            canPlay: true,
         })
 
     }
 
     handleBoardClick(i){
-        
-        const success = this.changeTopPieceInCol(i, this.state.currPlayer)
-        if (success){
-            this.setState(
-                {
-                    currPlayer: this.state.currPlayer == "red" ? "yellow": "red",
-                    stepNum : this.state.stepNum + 1,
-                });    
-        }
-
-        let winner = checkWin(this.state.history.slice(-1)[0].pieces); 
-
-        
-        if (!!winner){
-            this.setState({showWinMessage: true})
-            console.log("WINNER")
-            console.log(winner)
-        }
+        if (this.state.canPlay){
+            const success = this.changeTopPieceInCol(i, this.state.currPlayer)
+            if (success){
+                this.setState(
+                    {
+                        currPlayer: this.state.currPlayer == "red" ? "yellow": "red",
+                        stepNum : this.state.stepNum + 1,
+                    });    
+            }
     
+            let winner = checkWin(this.state.history.slice(-1)[0].pieces); 
+            if (!!winner){
+              this.handleWin(winner)  
+            }    
+        }
     }
+
+    handleWin(winner){
+        this.setState(
+            {showWinMessage: true,
+             winner: winner,
+             canPlay: false,
+        })
+
+        const winCount = this.deepCopy(this.state.winCount);
+        if (winner == "red"){
+            winCount.red += 1; 
+        } else {
+            winCount.yellow +=1;            
+        }
+        this.setState({winCount: winCount})
+    }
+
 
     handleResetClick(){
         this.resetGame()
@@ -118,23 +136,31 @@ class Game extends Component {
     render(){
 
         const history = this.state.history;
-        
         const current = history[this.state.stepNum];
 
         return (
             <>
                 <div className='game'>
                     <WinMessage 
-                        // show={this.state.showWinMessage}
-                        // onClick={ ()=> this.handleCloseMessage() }
-
-                       //     show={modalShow}
-                        //     onHide={() => setModalShow(false)}
+                        show={this.state.showWinMessage}
+                        onClose={ () => this.handleCloseMessage() }
+                        description={"Winner Winner Chicken Dinner"}
+                        title={"Nice job, " + this.state.winner + " won!"}
                     />
 
                     <GameBoard
                         columns={current.pieces}
                         onClick={i => this.handleBoardClick(i)}
+                    />
+
+                    <PlayerScores 
+                        player1={"Jonny"}
+                        player1Score={this.state.winCount.red}
+                        player2={"Jill"}
+                        player2Score={this.state.winCount.yellow}
+                        upNextColor={this.state.currPlayer}
+                        upNextPlayer={"jonny"}
+
                     />
                     <Controls
                         onResetClick={() => this.handleResetClick()}
