@@ -48,4 +48,4 @@ async function saveScore(score){
 
 export {getRandomColor, delay, saveScore }
 
-export default Play
+//export default Play
